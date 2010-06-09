@@ -1,5 +1,5 @@
 # Usage
-**Grit** is a helper library for the **git** version control system
+**Grit** is a helper library for the **git** version control system.
 
 The helper modules are called **pebbles** and can be executed this way
 
@@ -31,7 +31,7 @@ If you need help executing a pebble type the pebble name followed by *?* or *hel
 # Pebbles
 * **revnum**: prints an svn-like revision number for the given commit hash
 * **purge**: purges a file from the repository's history
-* **symlink**: symlinks git to specified directory (default: /usr/local/bin)
+* **symlink**: symlinks grit to specified directory (default: /usr/local/bin)
 
 # Extend
 To extend **Grit** simply write a custom pebble and put it in the *pebbles* directory.
