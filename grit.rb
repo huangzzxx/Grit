@@ -7,10 +7,18 @@
 
 if __FILE__ == $0
   
-  pebble = ARGV.first
+  grit_dir = File.dirname(__FILE__)
+  pebble_name = ARGV.first
   args = ARGV.slice(1, ARGV.length)
   
-  require 'pebbles/#{module}'
+  require "#{grit_dir}/src/pebble.rb"
   
-  Kernel.const_get(pebble.capitylize).run(Dir.getwd, args)
+  begin
+    require "#{grit_dir}/pebbles/#{pebble_name}.rb"
+    
+    pebble = Kernel.const_get(pebble_name.capitalize).new
+    pebble.run(grit_dir, Dir.getwd, args)
+  rescue LoadError
+    puts "Pebble not found."
+  end  
 end

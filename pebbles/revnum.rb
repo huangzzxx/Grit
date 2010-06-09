@@ -5,9 +5,10 @@
 #
 
 class Revnum < Pebble
-  def run(dir, args)
+  def run(grit_dir, cur_dir, args)
     ref = args.first ? args.first : "HEAD"
     commit = `git rev-parse #{ref}`;
-    revnum = `git rev-list --reverse HEAD | grep -n #{commit.chomp} | cut -d: -f1`
+    revnum = `git rev-list --reverse HEAD | grep -n #{commit.chomp} | cut -d: -f1`;
+    puts revnum
   end
 end
