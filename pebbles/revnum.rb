@@ -13,6 +13,6 @@ class Revnum < Pebble
   end
   
   def help
-    "syntax: grit revnum <commit>"
+    "syntax: grit revnum <? commit>"
   end
 end
