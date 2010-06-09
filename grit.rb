@@ -17,7 +17,12 @@ if __FILE__ == $0
     require "#{grit_dir}/pebbles/#{pebble_name}.rb"
     
     pebble = Kernel.const_get(pebble_name.capitalize).new
-    pebble.run(grit_dir, Dir.getwd, args)
+    
+    if args.first == "?" or args.first == "help"
+      puts pebble.help()
+    else
+      pebble.run(grit_dir, Dir.getwd, args)
+    end
   rescue LoadError
     puts "Pebble not found."
   end  

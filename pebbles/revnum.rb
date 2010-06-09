@@ -11,4 +11,8 @@ class Revnum < Pebble
     revnum = `git rev-list --reverse HEAD | grep -n #{commit.chomp} | cut -d: -f1`;
     puts revnum
   end
+  
+  def help
+    "syntax: grit revnum <commit>"
+  end
 end

@@ -8,4 +8,8 @@ class Pebble
   def run(dir, args)
     0
   end
+  
+  def help
+    "no help available"
+  end
 end
