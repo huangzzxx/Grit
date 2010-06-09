@@ -20,7 +20,7 @@ This command will put a symlink named *grit* in */usr/local/bin*. You can change
 
 	$ ruby grit.rb symlink /my/custom/path
 	
-To remove the symlink again type
+To remove the symlink again type the following (if you used a custom path put it before 'remove')
 
 	$ ruby grit.rb symlink remove
 	
