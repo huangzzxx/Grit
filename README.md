@@ -6,6 +6,7 @@ The helper modules are called **pebbles** and can be executed this way
 	
 For instance the command
 	
-	$ grit revnum HEAD
+	$ grit revnum
 	
-would output the svn-like revision number for the provided commit (HEAD can be replaced with any commit hash)
+would output the svn-like revision number for the provided commit.
+If no commit hash is provided (as above), Revnum assumes HEAD.
