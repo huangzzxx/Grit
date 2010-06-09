@@ -4,10 +4,10 @@
 #  Copyright 2010 chocomoko.com. All rights reserved.
 #
 
+require 'pathname'
 
 if __FILE__ == $0
-  
-  grit_dir = File.dirname(__FILE__)
+  grit_dir = File.dirname(Pathname.new(__FILE__).realpath)
   pebble_name = ARGV.first
   args = ARGV.slice(1, ARGV.length)
   
