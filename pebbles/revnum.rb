@@ -8,7 +8,8 @@ class Revnum < Pebble
   def run(grit_dir, cur_dir, args)
     ref = args.first ? args.first : "HEAD"
     commit = `git rev-parse #{ref}`;
-    revnum = `git rev-list --reverse HEAD | grep -n #{commit.chomp} | cut -d: -f1`;
+    revlist = `git rev-list #{commit.chomp}`
+    revnum = revlist.scan(/\n/).count
     puts revnum
   end
   
