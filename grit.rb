@@ -18,7 +18,7 @@ if __FILE__ == $0
     
     pebble = Kernel.const_get(pebble_name.capitalize).new
     
-    if args.first == "?" or args.first == "help"
+    if ["?", "help"].index(args.first)
       puts pebble.help()
     else
       pebble.run(grit_dir, Dir.getwd, args)
