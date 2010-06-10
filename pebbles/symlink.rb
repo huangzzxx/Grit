@@ -16,11 +16,15 @@ class Symlink < Pebble
     end
     
     if remove
-      `rm #{link_path}/grit`
+      File.delete("#{link_path}/grit")
     else
       FileUtils.mkdir_p(link_path)
-      `ln -s #{grit_dir}/grit.rb #{link_path}/grit`;
-      puts "Created symlink in #{link_path}"
+      begin
+        File.symlink("#{grit_dir}/grit.rb", "#{link_path}/grit")
+        puts "Created symlink in #{link_path}"
+      rescue NotImplemented
+        puts "Symlinking is not supported on your platform"
+      end
     end
   end
   
