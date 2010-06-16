@@ -29,6 +29,7 @@ If you need help executing a pebble type the pebble name followed by *?* or *hel
 	$ grit <pebble-name> help
 	
 # Pebbles
+* **hub**: opens the github page for matching remote
 * **revnum**: prints an svn-like revision number for the given commit hash
 * **purge**: purges a file from the repository's history
 * **symlink**: symlinks grit to specified directory (default: /usr/local/bin)
