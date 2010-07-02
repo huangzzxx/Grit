@@ -30,6 +30,7 @@ If you need help executing a pebble type the pebble name followed by *?* or *hel
 	
 # Pebbles
 * **hub**: opens the github page for matching remote
+* **rsquash**: squashes the history since the provided commit on the master branch
 * **revnum**: prints an svn-like revision number for the given commit hash
 * **purge**: purges a file from the repository's history
 * **symlink**: symlinks grit to specified directory (default: /usr/local/bin)
